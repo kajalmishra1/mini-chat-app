@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #e5ddd5;
+}
+
+.topbar {
+  background: #075e54;
+  color: white;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.container {
+  max-width: 520px;
+  margin: 20px auto;
+  padding: 0 12px;
+}
+
+.chat {
+  background: #dcf8c6;
+  padding: 12px 16px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 14px;
+}
+
+.chat-header {
+  font-weight: 600;
+  color: #075e54;
+  margin-bottom: 6px;
+}
+
+.arrow {
+  margin: 0 6px;
+  color: #888;
+}
+
+.message {
+  font-size: 16px;
+  color: #222;
+  word-wrap: break-word;
+}
+
+.edited {
+  color: #766363;
+  font-weight: bold;
+}
+
+.chat-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #666;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: none;
+  color: white;
+}
+
+.btn:hover { opacity: 0.85; }
+
+.edit   { background: #128c7e; }
+.delete { background: #e53935; }
+.new    { background: #25d366; }
+.chat-form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.chat-form label {
+  font-weight: 600;
+  color: #075e54;
+  font-size: 14px;
+}
+
+.chat-form input,
+.chat-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.chat-form input:focus,
+.chat-form textarea:focus {
+  outline: none;
+  border-color: #128c7e;
+}
+
+.chat-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.send {
+  background: #075e54;
+  padding: 10px;
+  font-size: 15px;
+}
+.chat-info {
+  color: #444;
+  font-size: 14px;
+  margin-bottom: 6px;
+}

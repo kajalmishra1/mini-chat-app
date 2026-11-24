@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All chats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+    <h2> All Chats </h2>
+    <a href="/chats/new" class="btn new">+ New Chat</a>
+    </header>
+
+    <!-- <form method="GET" action="/chats/new">
+        <button>New Chat</button>
+    </form> -->
+
+    <main class="container">
+    
+    <% for(chat of chats) { %>
+        <div class="chat">
+
+            <div class="chat-header">
+                
+                <span class="from">From : <%= chat.from %></span>
+                <span class="arrow">→</span>
+                <span class="to">To : <%= chat.to %></span>
+        </div>
+        <div class="msgs">
+             <p>Message : <%= chat.msg %></p>
+            <% if(chat.createdAt.getTime()!==chat.updatedAt.getTime()){ %>
+            <small style="color:rgb(118, 99, 99)"><b>(edited)</b></small>
+            
+            <%}%>
+            
+        </div>
+
+        <div class="chat-footer">
+            <small>Sent : <%= chat.createdAt.toLocaleString("en-In",{timeZone:"Asia/Kolkata"}) %></small>
+
+            <% if(chat.updatedAt.getTime()!==chat.createdAt.getTime()){ %>
+
+            <small>Edited At : <%= chat.updatedAt.toLocaleString("en-In",{timeZone:"Asia/Kolkata"}) %></small>
+        
+        <% } %>
+        </div>
+
+        <div class="actions">
+
+        <form action="/chats/<%= chat._id %>/edit" method="GET">
+                <button class="btn edit">Edit</button>
+        </form>
+        <form action="/chats/<%= chat._id%>/?_method=DELETE" method="POST" onsubmit="return confirm('Delete this message?')">
+            <button class="btn delete">Delete chat</button>
+        </form>
+
+        </div>
+        
+    </div>
+    <% } %>
+</main>
+</body>
+</html>
