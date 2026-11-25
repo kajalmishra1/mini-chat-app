@@ -105,7 +105,7 @@ Each chat is stored with these fields:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YOUR-USERNAME/mini-chat-app.git
+git clone https://github.com/kajalmishra1/mini-chat-app.git
 
 # 2. Go into the project folder
 cd mini-chat-app
@@ -122,7 +122,7 @@ node init.js
 node index.js
 ```
 
-Then open **http://localhost:8080/chats** in your browser.
+Then open **http://localhost:3000/chats** in your browser.
 
 > The app connects to a local database at `mongodb://127.0.0.1:27017/`.
 > If your port or database name is different, change it in `index.js` (and in `init.js`, if you use it).
